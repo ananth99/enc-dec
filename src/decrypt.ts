@@ -7,7 +7,7 @@ type enc_message_object_type = {
 };
 
 export async function decrypt() {
-  let enc = new TextEncoder();
+  // let enc = new TextEncoder();
 
   // use raw_aes_key for final decryption
   let raw_aes_key = "12345678123456781234567812345678";

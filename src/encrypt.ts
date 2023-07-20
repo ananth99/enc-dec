@@ -66,4 +66,7 @@ export async function encrypt() {
 
   // set output in localstorage
   localStorage.setItem("output", JSON.stringify(enc_message_object!));
+
+  document.querySelector<HTMLElement>("#decrypt_output")!.innerText =
+    JSON.stringify(enc_message_object);
 }
