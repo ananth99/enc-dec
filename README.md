@@ -53,3 +53,11 @@ This app uses the native [`Web Crypto API`](https://github.com/travist/jsencrypt
     ```
     openssl pkcs8 -topk8 -nocrypt -in <path to input-sec1-pem> -out <path to output-pkcs8-pem>
     ```
+
+### Known Issue
+
+- Currently unable to decrypt the joined base64 string of all the array parts using AES-CBC successfully
+  - crypto.subtle.decrypt() fails with
+    ```
+    The operation failed for an operation-specific reason
+    ```
