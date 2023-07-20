@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AES-RSA enc/dec</title>
+  </head>
+  <body>
+    <script type="module" src="/src/main.ts"></script>
+    <div class="mx-auto container">
+      <h1 class="text-center text-4xl mb-4">AES Encryption</h1>
+      <div class="flex">
+        <div class="flex flex-col">
+          <div class="flex mb-8">
+            <label for="privkey" class="text-lg mr-4">Private Key:</label>
+            <textarea id="privkey" rows="15" cols="65" class="text-xs">
+            </textarea>
+          </div>
+          <div class="flex mb-8">
+            <label for="pubkey" class="text-lg mr-6">Public Key: </label>
+            <textarea id="pubkey" rows="6" cols="65" class="text-xs"></textarea>
+          </div>
+          <div class="flex mb-8">
+            <label for="input" class="text-lg mr-20">Text:</label>
+            <textarea id="input" rows="15" cols="65" class="text-xs"></textarea>
+          </div>
+        </div>
+        <code class="flex" id="decrypt_output"></code>
+      </div>
+      <div class="flex justify-center">
+        <button
+          id="encrypt"
+          type="button"
+          class="border mr-4 border-none rounded-lg bg-blue-700 p-3 font-bold"
+        >
+          Encrypt
+        </button>
+        <button
+          id="decrypt"
+          type="button"
+          class="border border-none rounded-lg bg-blue-700 p-3 font-bold"
+        >
+          Decrypt
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
